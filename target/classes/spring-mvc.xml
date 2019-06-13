@@ -11,11 +11,12 @@
                         http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd"> 
                         
     <!-- Spring中引入其他配置文件 -->
+    <import resource="classpath:spring-mybatis.xml" />
     <import resource="classpath:spring-beans.xml" />
     <!-- <context:component-scan base-package="com.guofu.libai.dao" /> --> 
-    <context:component-scan base-package="com.guofu.libai.service.impl" />  
+    <context:component-scan base-package="com.guofu.libai" />  
     <!-- 自动扫描该包，使SpringMVC认为包下用了@controller注解的类是控制器 -->  
-    <context:component-scan base-package="com.guofu.libai.controller" />  
+    <!-- <context:component-scan base-package="com.guofu.libai.controller" />  --> 
     <!-- 扩充了注解驱动，可以将请求参数绑定到控制器参数 -->
     <mvc:annotation-driven/>
     <!-- 静态资源处理  css js imgs -->

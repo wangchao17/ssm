@@ -4,7 +4,7 @@ import javax.annotation.Resource;
 
 import org.springframework.stereotype.Service;
 
-import com.guofu.libai.dao.UserDao;
+import com.guofu.libai.dao.UserMapper;
 import com.guofu.libai.entity.User;
 import com.guofu.libai.service.UserService;
 
@@ -12,10 +12,10 @@ import com.guofu.libai.service.UserService;
 public class UserServiceImpl implements UserService {
 
 	@Resource
-	private UserDao userDao;
+	private UserMapper userMapper;
 
 	@Override
 	public User getUserById(String id){
-		return userDao.selectByPrimaryKey(Integer.valueOf(id));
+		return userMapper.selectByPrimaryKey(Integer.valueOf(id));
 	}
 }

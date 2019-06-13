@@ -1,11 +1,8 @@
 package com.guofu.libai.dao;
 
-import org.mybatis.spring.annotation.MapperScan;
-
 import com.guofu.libai.entity.User;
 
-@MapperScan
-public interface UserDao {
+public interface UserMapper {
     int deleteByPrimaryKey(Integer id);
 
     int insert(User record);
